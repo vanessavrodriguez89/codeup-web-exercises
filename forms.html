@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register With Us</title>
+</head>
+<body>
+    <forms>
+        <form method="POST" action="https://www.elformo.com/forms/adbc48af-c414-4d9f-a6f4-f7fe8d03a2f9">
+            <label for="email">Email: </label> <br>
+            <input type="email" name="email" id="email" placeholder="Example@gmail.com">
+            <br>
+            <label for="password">Password: </label><br>
+            <input type="password" name="password" id="password" placeholder="Enter password here">
+            <br>
+            <label for="bio">About Me: </label><br>
+            <textarea name="bio" id="bio" cols="30" rows="15" placeholder="Enter short description about yourself."></textarea>
+            <br>
+            <section>
+                <!--Below is a regular radio input-->
+                    <h3>How did you hear about us?</h3>
+                    <input type="radio" name="advertising" value="billboard" id="billboard">
+                        <label for="billboard">Billboard</label>
+                    <input type="radio" name="advertising" value="radio advertisement" id="radio">
+                        <label for="radio">Radio Advertisement</label>
+                    <input type="radio" name="advertising" value="internet advertisement" id="internet">
+                        <label for="internet">Internet Advertisement</label>
+                    <input type="radio" name="advertising" value="other" id="other">
+                        <label for="other">Other</label>
+
+            <!--Below have different name attributes-->
+                <h3>How did you hear about us?</h3>
+                <input type="radio" name="advMultiple1" value="billboard" id="billboard">
+                <label for="billboard">Billboard</label>
+                <input type="radio" name="advMultiple2" value="radio advertisement" id="radio">
+                <label for="radio">Radio Advertisement</label>
+                <input type="radio" name="advMultiple3" value="internet advertisement" id="internet">
+                <label for="internet">Internet Advertisement</label>
+                <input type="radio" name="advMultiple4" value="other" id="other">
+                <label for="other">Other</label>
+
+            <!--Below you can select multiple answers non-radio-->
+                <h3>How did you hear about us?</h3>
+                <input type="checkbox" name="advertisingDrop" value="billboard" id="billboard1">
+                <label for="billboard1">Billboard</label>
+                <input type="checkbox" name="advertisingDrop" value="radio advertisement" id="radio1">
+                <label for="radio1">Radio Advertisement</label>
+                <input type="checkbox" name="advertisingDrop" value="internet advertisement" id="internet1">
+                <label for="internet1">Internet Advertisement</label>
+                <input type="checkbox" name="advertisingDrop" value="other" id="other1">
+                <label for="other1">Other</label>
+            </section>
+            <br>
+            <section>
+                <label for="dropdown">Which web browser are you using? </label>
+                <select name="dropdown" id="dropdown">
+                    <option value="chrome">Chrome</option>
+                    <option value="firefox">Mozilla Firefox</option>
+                    <option value="safari">Safari</option>
+                    <option value="edge">Microsoft Edge</option>
+                    <option value="idk">I have no idea</option>
+                </select>
+            </section>
+            <br>
+            <button type="submit">Click Here to Register</button>
+    </forms>
+</body>
+</html>
