@@ -1,0 +1,59 @@
+body {
+    background-color: gainsboro;
+    background-image: url("../img/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    font-family: "Helvetica, Ariel";
+    color: aliceblue;
+}
+
+h2 {
+    color: cornflowerblue;
+    text-decoration: red underline;
+}
+
+.fancy-header {
+    color: cadetblue;
+    text-decoration: underline;
+    text-align: center;
+}
+
+#ol {
+    list-style: lower-greek;
+}
+
+#ul {
+    list-style: square;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table, tr {
+    vertical-align: right;
+    width: 100%
+}
+
+tr:hover {
+    background-color: #B19CD9;
+}
+
+a:hover {
+    opacity: 0.2;
+}
+
+a:visited {
+    color: pink;
+}
+
+a:active {
+    color: #FF1493;
+    text-decoration: line-through;
+}
+
+img:hover {
+    opacity: 0.2;
+}
+
