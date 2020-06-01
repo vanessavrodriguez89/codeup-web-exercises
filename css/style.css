@@ -1,43 +1,80 @@
+html,body {
+    width:100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+section {
+    border: none;
+    padding: 5px;
+    border-radius: 1.5em;
+    background-size: contain;
+    background-color: rgba(227,192,150,.3);
+}
 body {
-    background-color: gainsboro;
-    background-image: url("../img/background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    font-family: "Helvetica, Ariel";
+    font-family: 'Righteous', cursive;
     color: aliceblue;
 }
 
+header {
+    padding: 10px;
+    text-align: center;
+    background: rgba(80,177,199,.8);
+    color: white;
+    font-size: 20px;
+}
+
 h2 {
-    color: cornflowerblue;
-    text-decoration: red underline;
+    color: #5076C7;
+    text-decoration: #50C3C7 underline;
 }
 
 .fancy-header {
-    color: cadetblue;
+    color: #E3C096;
     text-decoration: underline;
+}
+
+.aboutUs {
     text-align: center;
+    column-count: 3;
+    }
+
+#videoBG {
+    position:fixed;
+    z-index: -1;
 }
 
-#ol {
-    list-style: lower-greek;
+.aboutUs li {
+    list-style: none;
 }
 
-#ul {
-    list-style: square;
+#TopofPage {
+    position: fixed;
+    top: 45em;
+    margin-left: 90%;
+    background-color: #50B1C7;
+    color: #FFF;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
 table, th, td {
     border: 1px solid black;
+    vertical-align: center;
 }
 
-table, tr {
-    vertical-align: right;
-    width: 100%
+table {
+    width: 80%
 }
 
 tr:hover {
-    background-color: #B19CD9;
+    background-color: #50C3C7;
 }
 
 a:hover {
@@ -56,4 +93,29 @@ a:active {
 img:hover {
     opacity: 0.2;
 }
+
+#videoBackground {
+    position:fixed;
+    z-index: -1;
+}
+@media (min-aspect-ratio: 16/9) {
+    #videoBackground {
+        width:100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    #videoBackground {
+        width:auto;
+        height: 100%;
+    }
+}
+@media (max-width: 767px) {
+    #videoBackground {
+        display: none;
+    }
+    body {
+        background: url('../img/Screenshot.png');
+        background-size: cover;
+    }
 
