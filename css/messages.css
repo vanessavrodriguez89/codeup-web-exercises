@@ -36,10 +36,10 @@ body, html {
 
 .message-warning {
     background-color: var(--bg-warning-background-color);
-    color:#8a6d3b;
+    color: var(--text-warning-color);
 }
 
 .message-error {
-    background-color: #f5c0bf;
-    color: #a94442;
+    background-color: var(--bg-error-background-color);
+    color: var(--text-error-color);
 }
