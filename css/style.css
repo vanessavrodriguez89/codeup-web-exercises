@@ -6,10 +6,13 @@ html,body {
 
 section {
     border: none;
+    margin: auto;
+    text-align: center;
     padding: 5px;
     border-radius: 1.5em;
     background-size: contain;
     background-color: rgba(227,192,150,.3);
+    width: 80%;
 }
 body {
     background-position: center;
