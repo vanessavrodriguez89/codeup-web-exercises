@@ -164,7 +164,7 @@ A product offer can be applied only if a person buys more than 2 items, and the 
     var notExpired = true;
     var premiumMem = false;
 
-    var offerApplied = (moreThan2 && notExpired) || (premiumMem); or var offerApplied = (moreThan2 ||premiumMem) && notExpired;
+    var offerApplied = (moreThan2 && notExpired) || (premiumMem); or var offerApplied = (moreThan2 || premiumMem) && notExpired;
 
     console.log(offerApplied)
 

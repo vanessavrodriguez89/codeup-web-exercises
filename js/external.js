@@ -11,7 +11,7 @@ alert("Welcome to my Website!");
 
     "Great, blue is my favorite color too!"*/
 
-var favoriteColor = prompt("What is your favorite color?");
+let favoriteColor = prompt("What is your favorite color?");
 
 if (favoriteColor === "blue") {
     alert("Great, blue is my favorite color too!");
@@ -25,15 +25,34 @@ Complete exercise 3 from the previous lesson, but write your code in the externa
     Use an alert to show the results of each problem.*/
 
     // First Exercise
-var littleMermaid = 3, brotherBear = 5, Hercules = 1, pricePerDay = 3;
-var totalCost = (littleMermaid + brotherBear + Hercules) * pricePerDay
+let pricePerDay = 3
+let littleMermaid = parseInt(prompt("How many did would you like to rent The Little Mermaid for?"));
+let brotherBear = parseInt(prompt("How many did would you like to rent Brother Bear for?"));
+let hercules = parseInt(prompt("How many did would you like to rent Hercules for?"));
+
+let totalCost = (littleMermaid + brotherBear + hercules) * pricePerDay;
 
 alert("Your total cost is: $" + totalCost);
 
     // Second Exercise
-var google = 400, amazon = 380, facebook = 350;
+let google = 400;
+let amazon = 380;
+let facebook = 350;
+let googleHours = parseInt(prompt("How many hours did you work at Google?"));
+let amazonHours = parseInt(prompt("How many hours did you work at Amazon?"));
+let facebookHours = parseInt(prompt("How many hours did you work at Facebook?"));
 
-alert("Total pay is $ " + ((facebook * 10) + (google * 6) + (amazon * 4)));
+alert("Your total pay is $" + ((facebook * facebookHours) + (google * googleHours) + (amazon * amazonHours)));
 
-// Third Exercise
+    // Third Exercise
+let isClassOpen = confirm("Is there room in this class?");
+let isScheduleOpen = confirm("Does this class work with your schedule?");
+alert("You may register: " + (isClassOpen && isScheduleOpen));
+
+    // Fourth Exercise
+let numberItemsPurchased = parseInt(prompt("How many items did you purchase?"));
+let isOfferExpired = confirm("Press OK if the offer is not expired");
+let isPremiumMember = confirm("Press OK if you are a premium member");
+
+alert("Offer Applied: " + (isOfferExpired && (numberItemsPurchased > 2 || isPremiumMember)));
 
