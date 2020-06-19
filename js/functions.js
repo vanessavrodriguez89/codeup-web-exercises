@@ -13,7 +13,7 @@ function sayHello(name) {
 }
 
 
-console.log(sayHello("Vanessa"));
+console.log(sayHello("codeup"));
 
 /**
  * TODO:
@@ -23,7 +23,7 @@ console.log(sayHello("Vanessa"));
  * console.log 'helloMessage' to check your work
  */
 
-let helloMessage = sayHello(name, "Vanessa");
+let helloMessage = sayHello("Vanessa");
 console.log(helloMessage)
 
 /**
@@ -33,8 +33,8 @@ console.log(helloMessage)
  * console.
  */
 let myName = "Vanessa";
-
 console.log(sayHello(myName));
+
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 var random = Math.floor((Math.random() * 3) + 1);
@@ -59,8 +59,8 @@ var random = Math.floor((Math.random() * 3) + 1);
 function isTwo(num) {
     return num === 2;
 }
-
 console.log(isTwo(random));
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -87,7 +87,7 @@ console.log(calculateTip(0.15, 33.42));
 function calculateTip (tipPercent, billSubTotal) {
     return tipPercent * billSubTotal
 }
-    //adding + in front of prompt converts the string to a number, but not an integer. parseInt returned Nan
+    //adding in front of prompt converts the string to a number, but not an integer. parseInt returned Nan
     let billSubTotal = +prompt('How much is your bill?');
     let tipPercent = +prompt('How much would you like to tip?');
     let totalAmount = tipPercent * billSubTotal
