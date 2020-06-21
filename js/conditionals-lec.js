@@ -335,16 +335,16 @@ console.log(weather);
 var color = prompt("Please enter a traffic light color: green, yellow, or red.");
 
 switch (color) {
-    case "green"
+    case "green":
         alert("Go")
         break;
-    case "yellow"
+    case "yellow":
         alert("Slow down")
         break;
-    case "red"
+    case "red":
         alert("Stop")
         break;
-    default
+    default:
         alert("Please enter a traffic light color: green, yellow, or red.")
 }
 
