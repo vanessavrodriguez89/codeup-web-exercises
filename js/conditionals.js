@@ -158,37 +158,37 @@ console.log(calculateTotal(luckyNum, 10));*/
  */
 // Generate a random number between 0 and 6
 
-let billTotal = prompt("What amount was your total bill?")
-var luckyNumber = Math.floor(Math.random() * 6);
-    switch (luckyNumber) {
-        case 0:
-            alert("Sorry, you did not win a discount. Better luck next time.")
-            break;
-        case 1:
-            alert("You won a 10% discount!")
-            break;
-        case 2:
-            alert("You won a 20% discount!")
-            break;
-        case 3:
-            alert("You won a 30% discount!")
-            break;
-        case 4:
-            alert("You won a 40% discount!")
-            break;
-        case 5:
-            alert("You won a 50% discount!")
-            break;
-        default:
-            alert("You won a 60% discount")
-    }
-
-var calculateTotal = function (luckyNumber,billTotal) {
-    return billTotal - ((luckyNumber * 0.10) * billTotal);
-}
-
-    alert("Your total before the discount was $" + billTotal);
-    alert("Your total after discount is $" + calculateTotal(luckyNumber, billTotal));
+// let billTotal = prompt("What amount was your total bill?")
+// var luckyNumber = Math.floor(Math.random() * 6);
+//     switch (luckyNumber) {
+//         case 0:
+//             alert("Sorry, you did not win a discount. Better luck next time.")
+//             break;
+//         case 1:
+//             alert("You won a 10% discount!")
+//             break;
+//         case 2:
+//             alert("You won a 20% discount!")
+//             break;
+//         case 3:
+//             alert("You won a 30% discount!")
+//             break;
+//         case 4:
+//             alert("You won a 40% discount!")
+//             break;
+//         case 5:
+//             alert("You won a 50% discount!")
+//             break;
+//         default:
+//             alert("You won a 60% discount")
+//     }
+//
+// var calculateTotal = function (luckyNumber,billTotal) {
+//     return billTotal - ((luckyNumber * 0.10) * billTotal);
+// }
+//
+//     alert("Your total before the discount was $" + billTotal);
+//     alert("Your total after discount is $" + calculateTotal(luckyNumber, billTotal));
 
 /**
  * TODO:
@@ -207,17 +207,12 @@ var calculateTotal = function (luckyNumber,billTotal) {
  * HINT: The way we prompt for a value could be improved
  */
 
-var confirmNumberInput = confirm("Would you like to enter a number?");
-if (confirmNumberInput) {
-    prompt("Enter a number")
-    { if (confirmNumberInput === true) {
-        (confirmNumberInput % 2 === 0) ? alert("You entered an even number") : alert("You entered an odd number");}
-        {(confirmNumberInput >= 0) ? alert("You entered a positive number") : alert("You entered a negative number");}
-        alert("The number you entered + 100 is = " + (confirmNumberInput() + 100));
+let confirmNumberInput = confirm("Would you like to enter a number?");
+if (confirmNumberInput === true) {
+    let confirmNumberInput = +prompt("Enter a number");
+        (confirmNumberInput % 2 === 0) ? alert("You entered an even number") : alert("You entered an odd number");
+        (confirmNumberInput >= 0) ? alert("You entered a positive number") : alert("You entered a negative number");
+        alert("The number you entered + 100 is = " + (confirmNumberInput + 100))
+    } else {
+        alert("You chose not to participate.")
     }
-    }
-// else
-//     {
-//         alert("You chose not to participate.")
-//     }
-// }
