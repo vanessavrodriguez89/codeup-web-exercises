@@ -92,16 +92,51 @@
        //  25
        //  30
 
-    const countFromBy = function (num1, num2) {
+   /* const countFromBy = function (num1, num2) {
         console.log(num1);
         console.log(num1 + num2);
         console.log(num1 + 2 * num2);
         console.log(num1 + 3 * num2);
         console.log(num1 + 4 * num2);
     }
-        countFromBy(10,5)
+        countFromBy(10,5)*/
 
 
+    /*    Monday June 22
+    Write a JS function called magic8Ball that takes in one number as a parameter. The return value should be one of the following strings that correlates to the number passed in.
+
+
+        As I see it, yes.
+            Ask again later.
+            Better not tell you now.
+            Cannot predict now.
+            Concentrate and ask again.
+            Don’t count on it.
+            Outlook not so good.
+            Outlook is good.*/
+
+let luckyNumber = Math.floor(Math.random() * 8);
+        function magic8Ball(luckyNumber) {
+            if (luckyNumber === 1) {
+                alert ("As I see it, yes.")
+            } else if (luckyNumber === 2) {
+                alert("Ask again later.")
+            } else if (luckyNumber === 3) {
+                alert("Better not tell you now.")
+            }else if (luckyNumber === 4){
+                alert("Cannot predict now.")
+            } else if (luckyNumber === 5) {
+                alert("Concentrate and ask again.")
+            }else if (luckyNumber === 6) {
+                alert("Don’t count on it.")
+            } else if (luckyNumber === 7) {
+                alert("Outlook not so good.")
+            } else if (luckyNumber === 8) {
+                alert("Outlook is good.")
+            }
+        }
+
+        console.log(magic8Ball(luckyNumber));
 
     </script>
 </body>
