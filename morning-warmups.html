@@ -138,6 +138,30 @@ let luckyNumber = Math.floor(Math.random() * 8);
 
         console.log(magic8Ball(luckyNumber));
 
+
+        //Monday June 29
+        // function toggleLightsOn(lights) {
+        //     if(lights === true) {
+        //         return "turn lights off"
+        //     } else {
+        //         return "turn lights on"
+        //     }
+        // }
+        // console.log(toggleLightsOn(true))
+
+        let lights = "on";
+        let lightSwitch = function () {
+            if (lights === "on") {
+                lights = "off";
+            } else {
+                lights = "on";
+            }
+        }
+        console.log("lights are " + lights);
+        lightSwitch();
+        console.log("lights are now " + lights);
+        lightSwitch();
+
     </script>
 </body>
 </html>
