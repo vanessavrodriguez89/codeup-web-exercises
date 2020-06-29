@@ -185,6 +185,25 @@ let luckyNumber = Math.floor(Math.random() * 8);
 
         for (let i = 1; i <=10; i++)
             console.log(i);
+
+
+        for (let num=0;num<=20;num++) {
+            //could also do num+=2 instead of num++
+            if (num%2 === 0)
+                console.log(num);
+        }
+
+        //Multiplying without multiplying...uses addition
+        let multiply = function (a,b) {
+            let answer =0;
+            for (let i = 0;i<b;i++) {
+                answer += a;
+            }
+            return answer;
+        }
+        console.log(multiply(4, 5));
+
+        for ()
     </script>
 </body>
 </html>
