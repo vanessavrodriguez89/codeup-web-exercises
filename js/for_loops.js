@@ -53,6 +53,11 @@ for (let i=0; i<10; i++) {
 88888888
 999999999*/
 
+for (let i=0; i<10; i++) {
+    i = i.toString();
+    console.log(i.repeat(i));
+}
+
 
 /* Create a for loop that uses console.log to create the output shown below.
 
