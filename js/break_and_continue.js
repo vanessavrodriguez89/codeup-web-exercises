@@ -19,6 +19,6 @@ for (let i = 1; i <=50; i+= 1) {
     if (i !== oddNumber) {
         console.log("Here is an odd number: " + i);
     } else {
-        console.log("Yikes! Skipping number" + oddNumber);
+        console.log("Yikes! Skipping number: " + oddNumber);
     }
 }

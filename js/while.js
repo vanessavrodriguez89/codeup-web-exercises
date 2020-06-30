@@ -30,15 +30,13 @@ while (startingNum <= 32768) {
 let allCones = Math.floor(Math.random() * 50) + 50;
 let amountPurchased;
 do {
-    console.log("I have " + allCones + " for sale.")
     amountPurchased = Math.floor(Math.random() * 5) + 1;
+    console.log("I have " + allCones + " for sale.")
     if (amountPurchased <= allCones) {
-        console.log(amountPurchased + " sold");
+        console.log(amountPurchased + " cones sold...");
         allCones = allCones - amountPurchased
-    } else if (allCones === 0) {
-        console.log("Yay! I sold them all!");
     } else {
         console.log("Cannot sell you " + amountPurchased + " cones. I only have " + allCones);
-        // break;
     }
-} while (allCones !== 0);
+} while (allCones > 0);
+        console.log("Yay! I sold them all!");
