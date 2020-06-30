@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // var tvShows = ["Sherlock", "Game of Thrones", "The Witcher"];
+    // console.log(tvShows);
+
+    // var example = ["string1", "string2", 2, [1, true, "false"]];
+    // console.log(example);
+    // console.log("length is " + example.length);
+
+    // var shapes = ['square', 'rectangle', 'circle', 'triangle'];
+    // var notice = 'The shape at index 1 is: ' + shapes[1] + "\n";
+    // notice = notice + 'The shape at index 4 is: ' + shapes[4];
+    // alert(notice);
+
+    // var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    // for(let i = 0; i < fruits.length; i++) {
+    //     console.log(fruits[i]);
+    // }
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    // fruits.forEach(function(fruiteria, index) {
+    //     console.log('the fruit at index ' + index + ' is ' + fruiteria + '.');
+    // });
+
+
+    //Use a named function and for-each loop to print each element of this array to the console log.
+    fruits.forEach(myFruitFunction)
+
+    function myFruitFunction(fruiteria, index){
+        console.log('the fruit at index ' + index + ' is ' + fruiteria + '.');
+    };
+
+</script>
+</body>
+</html>
