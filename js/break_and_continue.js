@@ -1,8 +1,8 @@
 // Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input.
 // Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
-
+var oddNumber;
 while (true) {
-    var oddNumber = +prompt("Enter an odd number between 1 and 50");
+    oddNumber = +prompt("Enter an odd number between 1 and 50");
 
     if (oddNumber % 2 !== 0 && oddNumber <= 50 && oddNumber >= 1) {
         console.log(oddNumber)
