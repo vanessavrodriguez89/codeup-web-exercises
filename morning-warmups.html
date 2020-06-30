@@ -203,6 +203,23 @@ let luckyNumber = Math.floor(Math.random() * 8);
         }
         console.log(multiply(4, 5));
 
+    //    using a loop and conditionals in a function. count 1-10; output 1 is odd, 2 is even
+
+        // for (var countNum = 1; countNum<=10; countNum++); Daniel says he prefers while loops
+        var countTo10 = function () {
+            var countNum = 1;
+            while (countNum <= 10)
+            {
+                if (countNum % 2 === 0) {
+                    console.log(countNum + " is even");
+                } else {
+                    console.log(countNum + " is odd");
+                }
+                countNum++
+            }
+        }
+        countTo10();
+
     </script>
 </body>
 </html>
