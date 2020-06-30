@@ -13,12 +13,12 @@ console.log(oddNumber);
 console.log("Number to skip is: " + oddNumber)
 
 for (let i = 1; i <=50; i+= 1) {
-    if (i % 2 === 0) {
+    // if (i % 2 === 0) {
+    //     continue;
+    // }
+    if (i === oddNumber) {
+        console.log("Yikes! Skipping number: " + oddNumber);
         continue;
     }
-    if (i !== oddNumber) {
-        console.log("Here is an odd number: " + i);
-    } else {
-        console.log("Yikes! Skipping number: " + oddNumber);
-    }
+    console.log("Here is an odd number: " + i);
 }
