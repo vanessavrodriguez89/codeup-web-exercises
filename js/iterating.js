@@ -7,7 +7,7 @@
      * 'names'.
      */
 
-    let names = ["Vanessa", "Ryan", "Tracy", "Audi"]
+    let names = ["Jessica", "Justin", "Nicole", "Sam"];
 
     /**
      * TODO:
@@ -58,20 +58,20 @@
      */
 
     var myArrayExample = [1, 2, 3, 4, 5];
-    function firstItemArray(myArrayExample) {
-        return myArrayExample[0];
+    function firstItemArray(arr) {
+        return arr[0];
     }
 
     console.log("Returns the first item in the array which should be 1: " + firstItemArray(myArrayExample));
 
-       function secondItemArray(myArrayExample) {
-        return myArrayExample[1];
+       function secondItemArray(arr) {
+        return arr[1];
     }
 
     console.log("Returns the second item in the array which should be 2: " + secondItemArray(myArrayExample));
 
-        function lastItemArray(myArrayExample) {
-        return myArrayExample[4];
+        function lastItemArray(arr) {
+        return arr[arr.length-1];
     }
 
     console.log("Returns the last item in the array which should be 5: " + lastItemArray(myArrayExample));

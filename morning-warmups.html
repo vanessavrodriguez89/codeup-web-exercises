@@ -229,6 +229,20 @@ let luckyNumber = Math.floor(Math.random() * 8);
         }
 console.log(addition(7,2))
 
+        function doubleChar(str) {
+            var word = " ";
+            for (var i = 0; i < str.length; i++){
+                word = word + str[i] + str[i];
+            }
+            return word;
+        }
+
+        //str[str.length-1] will retrieve the last index of the string
+
+        console.log(doubleChar("String"));
+        console.log(doubleChar("Hello World"));
+        console.log(doubleChar("1234!_"));
+
     </script>
 </body>
 </html>
