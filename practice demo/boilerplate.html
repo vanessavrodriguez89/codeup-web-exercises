@@ -23,18 +23,66 @@
     //     console.log(fruits[i]);
     // }
 
-    var fruits = ["Banana", "Orange", "Apple", "Mango"];
-    // fruits.forEach(function(fruiteria, index) {
+    // var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    // // fruits.forEach(function(fruiteria, index) {
+    // //     console.log('the fruit at index ' + index + ' is ' + fruiteria + '.');
+    // // });
+    //
+    //
+    // //Use a named function and for-each loop to print each element of this array to the console log.
+    // fruits.forEach(myFruitFunction)
+    //
+    // function myFruitFunction(fruiteria, index){
     //     console.log('the fruit at index ' + index + ' is ' + fruiteria + '.');
-    // });
+    // };
+
+    /*MINI LAB
+Create an Array with the five weekdays.
+Write the size to the console.
+Add Sunday to the front of the array.
+Add Saturday to the end of the array.
+Write array values and the new size to the console.*/
+    // var weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+    // console.log(weekdays);
+    // console.log(weekdays.length);
+    // weekdays.unshift("Sunday");
+    // console.log(weekdays);
+    // console.log(weekdays.length);
+    // weekdays.push("Saturday")
+    // console.log(weekdays);
+    // console.log(weekdays.length);
+    //
+    // weekdays.forEach(function (day) {
+    //     console.log("\t" + day)
+    // })
 
 
-    //Use a named function and for-each loop to print each element of this array to the console log.
-    fruits.forEach(myFruitFunction)
+    /*MINI LAB
+Create an Array with the five elements.
+Write the array to the console.
+Pop the last element and write it to the console.
+Remove the first element from the array and write it to the console.
+Write the array to the console.*/
+    // var tvShows = ["The Witcher", "Sabrina", "Riverdale", "Black Mirror", "Sherlock"]
+    // console.log("Some of my favorite shows are: " + tvShows);
+    // console.log("pop removes from the end of my array: " + tvShows.pop());
+    // console.log("shift removes from the beginning of my array: " + tvShows.shift());
+    // console.log("My new list of tv shows is " + tvShows);
 
-    function myFruitFunction(fruiteria, index){
-        console.log('the fruit at index ' + index + ' is ' + fruiteria + '.');
-    };
+//  Write the index of indigo to an alert
+    /*var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet', 'red'];
+    alert(colors.indexOf("indigo"));*/
+
+    /*MINI LAB
+Given: fruits = ["Banana", "Orange", "Apple", "Mango"];
+Slice out 'Orange' and 'Apple' into another array.
+Write the second array values to the console.*/
+    let fruits = ["Banana", "Orange", "Apple", "Mango"]
+    // let newFruits = fruits.slice(1,3);
+    // alert(fruits + " & " + newFruits)
+
+    // alert(fruits.reverse())
+    alert(fruits.sort())
 
 </script>
 </body>
