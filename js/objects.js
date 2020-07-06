@@ -11,6 +11,12 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
+let person = {
+    firstName: "Vanessa",
+    lastName : "Rodriguez"
+    };
+console.log(person.firstName)
+console.log(person.lastName)
 
     /**
      * TODO:
@@ -21,6 +27,10 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+    person.sayHello = function() {
+        console.log("Hello from " + person.firstName + " " + person.lastName + "!")
+    }
+    person.sayHello()
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -36,11 +46,20 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+    shoppers.forEach(function(shopper) {
+        if (shopper.amount > 200) {
+            console.log(shopper.name + " originally owed " + shopper.amount + " but after a 12% discount their total is " + (shopper.amount - (shopper.amount * .12)) + ".");
+        } else {
+            console.log(shopper.name + " didn't receive a discount and owes " + shopper.amount + ".");
+        }
+    });
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
