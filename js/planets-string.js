@@ -29,6 +29,8 @@
      */
     var htmlString = "<ul><li>";
     htmlString += planetsArray.join("</li><li>");
-    document.body.innerHTML += htmlString;
+    htmlString += "</li> </ul>"
+    document.write(htmlString)
+    // document.body.innerHTML += htmlString;
 
 })();

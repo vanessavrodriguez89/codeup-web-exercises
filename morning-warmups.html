@@ -243,6 +243,21 @@ console.log(addition(7,2))
         console.log(doubleChar("Hello World"));
         console.log(doubleChar("1234!_"));
 
+    //    Fizzbuzz if divisible by 3 output fizz, if divisible by 5 output buzz, if divisible by both output fizzbuzz
+        function fizzbuzz() {
+            for (var i = 1; i <= 30; i++) {
+                if (i % 3 === 0 && i % 5 === 0)
+                    console.log("FizzBuzz");
+                else if (i % 3 === 0)
+                    console.log("Fizz");
+                else if (i % 5 === 0)
+                    console.log("Buzz");
+                else
+                    console.log(i);
+            }
+        }
+        console.log(fizzbuzz());
+
     </script>
 </body>
 </html>
