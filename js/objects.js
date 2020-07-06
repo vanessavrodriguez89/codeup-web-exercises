@@ -14,9 +14,18 @@
 let person = {
     firstName: "Vanessa",
     lastName : "Rodriguez"
+    // sayHello: function () {
+    //     return "Hello from " + this.firstName + " " + this.lastName + "!"
+    // }
     };
+
 console.log(person.firstName)
 console.log(person.lastName)
+
+    //You could also do it this way:
+    /*var person = {}
+    person.firstName = "Daniel"
+    person.lastName = "Fryar"*/
 
     /**
      * TODO:
@@ -28,9 +37,10 @@ console.log(person.lastName)
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
     person.sayHello = function() {
-        console.log("Hello from " + person.firstName + " " + person.lastName + "!")
+        return "Hello from " + this.firstName + " " + this.lastName + "!"
     }
-    person.sayHello()
+
+    console.log(person.sayHello());
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -53,6 +63,13 @@ console.log(person.lastName)
     ];
 
     shoppers.forEach(function(shopper) {
+        //Daniel's walkthrough
+        /*let saved = 0;
+        * if (shopper.amount > 200) {
+        * saved = shopper.amount * .12;
+        * }
+        *
+        * console.log(shopper.name + " spent " + shopper.amount + ". They saved " + saved + " for a total of " + (shopper.amount - saved));*/
         if (shopper.amount > 200) {
             console.log(shopper.name + " originally owed " + shopper.amount + " but after a 12% discount their total is " + (shopper.amount - (shopper.amount * .12)) + ".");
         } else {
@@ -79,21 +96,21 @@ console.log(person.lastName)
         Title: "Strangers on a Train",
         Author: {
             firstName: "Patricia",
-            lastName: "Highsmith",
+            lastName: "Highsmith"
         }
         },
         {
             Title: "The Big Sleep",
             Author: {
                 firstName: "Raymond",
-                lastName: "Chandler",
+                lastName: "Chandler"
             }
         },
         {
             Title: "The Hound of the Baskervilles",
             Author: {
                 firstName: "Sir Arthur Conan",
-                lastName: "Doyle",
+                lastName: "Doyle"
             }
         },
         {
@@ -136,8 +153,11 @@ console.log(person.lastName)
      *      ---
      *      ...
      */
+    books.forEach(function (book) {
+        console.log(book.Title)
+    });
     books.forEach(function(book,index) {
-        console.log(("Book # " + (index + 1) + "\n" + ("Title: " + book.Title) + " " +  "\n" + ("Author: "  + book.Author.firstName + " " + book.Author.lastName)));
+        console.log(("Book # " + (index + 1) + "\n" + ("Title: " + book.Title) + " " +  "\n" + ("Author: "  + book.Author.firstName + " " + book.Author.lastName + "\n" + "---")));
     });
     /**
      * Bonus:
@@ -149,28 +169,25 @@ console.log(person.lastName)
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-    function createBook(title, firstName, lastName) {
-        var book = {
-            title: title,
-            author: {
-                firstName: firstName,
-                lastName: lastName
-            }
-        }
+    const createBook = function(title, authorFirstName, authorLastName) {
+        let book = {}
+            book.title = title;
+            book.author = {};
+                book.author.firstName = authorFirstName;
+                book.author.lastName = authorLastName;
         return book;
     };
-    var books = [createBook("Hyperion","Dan", "Simmons"), createBook("Raise High The Roof Beam, Carpenters", "J.D. Salinger"), createBook("On Writing", "Stephen King"), createBook("The North China Lover", "Margurite Duras"), createBook("Meditations", "Marcus Aurelius")]
+    let books2 = [];
+    books2.push(createBook("Hyperion","Dan", "Simmons"));
 
 
-    function showBookInfo(obj){
-        return  "\"" + obj.title + "\" is the title of this book, and it was written by " + obj.author
+    function showBookInfo(books) {
+        console.log(`Title: ${books.title}\nAuthor: ${books.author}\n---`);
     }
 
-    // console.log(showBookInfo(books[0]));
-
-    books.forEach(function (book) {
-        console.log(showBookInfo(book));
+    books.forEach((el, idx) => {
+        console.log(`Book # ${idx + 1}`);
+        showBookInfo(el);
     })
-
 })();
 
