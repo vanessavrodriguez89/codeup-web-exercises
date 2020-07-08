@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Lesson</title>
+</head>
+<body>
+<!--<h1 id="demo"></h1>-->
+
+<!--<p class="a"></p>-->
+<!--<p class="b"></p>-->
+<!--<p class="a"></p>-->
+<!--<p class="b"></p>-->
+
+<p id="demo"></p>
+<p id="demoText"></p>
+
+<!--<form name="login">-->
+<!--    <div>-->
+<!--        <label for="username">Username</label>-->
+<!--        <input id="username" name="username" type="text" value="user">-->
+<!--    </div>-->
+<!--</form>-->
+
+<script>
+    "use strict";
+ //    (function() {
+ //        var tag = document.getElementById('demo');
+ //        tag.innerHTML = "Hyperion Rocks!"
+ //    })();
+ //
+ //    (function () {
+ //    var classB = document.getElementsByClassName("b");
+ //    for (var i = 0; i < classB.length; i++) {
+ //        console.log(classB[i].outerHTML);
+ //    }
+ // })();
+
+    // (function () {
+    //     var tag2 = document.getElementsByTagName("p");
+    //     for (var i = 0; i < tag2.length; i++) {
+    //         console.log(tag2[i].outerHTML);
+    //     }
+    // })();
+
+    // (function () {
+    //     var formTag = document.forms.login.username;
+    //     console.log(formTag.value);
+    // })();
+
+/*   MINI LAB
+    Create a <p> tag with the id='demo'
+    Change the innerHTML to '<b>Hello Hyperion!<\b>'
+    Create a <p> tag with the id='demoText'
+    Change the innerText to '<b>Hello Hyperion!<\b>'*/
+
+    (function () {
+
+    var mainParagraph = document.getElementById('demo');
+    mainParagraph.innerHTML = "<b>Hello Hyperion!</b>";
+
+    var secondParagraph = document.getElementById("demoText");
+    secondParagraph.innerText = "<b>Hello Hyperion!</b>";
+    })();
+
+</script>
+</body>
+</html>
