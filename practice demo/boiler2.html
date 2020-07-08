@@ -12,7 +12,8 @@
 <!--<p class="a"></p>-->
 <!--<p class="b"></p>-->
 
-<p id="demo"></p>
+<p id="demo">Test text</p>
+<p id="demo2" data-dbid="field"></p>
 <p id="demoText"></p>
 
 <!--<form name="login">-->
@@ -21,6 +22,13 @@
 <!--        <input id="username" name="username" type="text" value="user">-->
 <!--    </div>-->
 <!--</form>-->
+
+<div id="first">
+    <p>First DIV</p>
+</div>
+<div id="second">
+    <p>Second DIV</p>
+</div>
 
 <script>
     "use strict";
@@ -54,13 +62,37 @@
     Create a <p> tag with the id='demoText'
     Change the innerText to '<b>Hello Hyperion!<\b>'*/
 
+    // (function () {
+    //
+    // var mainParagraph = document.getElementById('demo');
+    // mainParagraph.innerHTML = "<b>Hello Hyperion!</b>";
+    //
+    // var secondParagraph = document.getElementById("demoText");
+    // secondParagraph.innerText = "<b>Hello Hyperion!</b>";
+    // })();
+
+    // MINI LAB
+    // Create an <p> tag with the id='demo'
+    // Change the font-size to 6rem;'
+    // Create a <p> tag with the id='demo2' and a data-* attribute
+    // Log the attribute to the console log or alert it.
+
     (function () {
+        var changeFontSize = document.getElementById("demo");
+        changeFontSize.setAttribute("style", "font-size: 6rem");
 
-    var mainParagraph = document.getElementById('demo');
-    mainParagraph.innerHTML = "<b>Hello Hyperion!</b>";
+        var getData = document.getElementById("demo2");
+        var dataAttribute = demo2.getAttribute("data-dbid");
+        alert("The database attribute is: " + dataAttribute);
+    })();
 
-    var secondParagraph = document.getElementById("demoText");
-    secondParagraph.innerText = "<b>Hello Hyperion!</b>";
+    (function () {
+        var changeBGColor = document.getElementById("second");
+        // changeBGColor.setAttribute("style", "background-color: black");
+        changeBGColor.style['background-color'] = 'red';
+
+        var classChangeBGColor = document.getElementsByTagName('div');
+        classChangeBGColor[0].style['background-color'] = 'purple'
     })();
 
 </script>
