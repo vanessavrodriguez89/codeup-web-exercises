@@ -297,6 +297,24 @@ console.log(addition(7,2))
         }
         console.log(tenSpot([345]))
 
+    //    Write a function that will return an array passed sorted in reverse alphabetical order, when passed an array of strings. It should return null if any element within the array is not a string.
+        function typeOfValue(value) {
+            for (let i = 0; i < value.length; i++) {
+                if (typeof value[i] !== "string") {
+                    return null
+                } return value.sort().reverse();
+            }
+        }
+
+        // let typeOfValue = value.filter(function(value){
+        //     if (typeof value[i] !== "string") {
+        //         return null
+        //     } return value
+        // })
+
+        console.log(typeOfValue([9, "nine"]));
+        console.log(typeOfValue(["banana", "apples", "oranges"]));
+
     </script>
 </body>
 </html>
