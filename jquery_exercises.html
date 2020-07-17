@@ -5,6 +5,12 @@
     <title>jQuery Intro</title>
     <link rel="stylesheet" href="">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dawning+of+a+New+Day&family=Rock+Salt&display=swap" rel="stylesheet">
+
+    <style>
+        .backgroundcolor {background-color: yellow}
+        .fontsize {font-size: 18px}
+        .redtext {color: red; border: 1px green solid}
+    </style>
 </head>
 <body>
 <h1 id="header" class="header-class">My Favorite Drinks</h1>
@@ -26,6 +32,7 @@
 <script src="jquery.fontselect.js"></script>
 
 <script>
+    $(document).ready(function() {
     // Id Selectors
     // TODO Update the jQuery code to select and alert a different id.
     // alert($('#ulID').text());
@@ -33,7 +40,7 @@
     // alert($('#paragraph').text());
 
     //    TODO Use the same id on 2 elements. How does this change the jQuery selection?
-    //    It only displayed the first id's contents
+    //    It only displayed the first id's contents. Same thing would happen with multiple elements with the same class--only the first would appear.
 
     // Class Selectors
     // TODO Remove your custom jQuery code from previous exercises.
@@ -44,24 +51,70 @@
     //     TODO Remove the class from one of the elements. Refresh and test that the border has been removed.
     // Border was removed
     //     TODO Give another element an id of codeup. Does this element get a border now?
-    // Yes
+    // No
 
     // Element Selectors
 
     // TODO Remove your custom jQuery code from previous exercises.
     // TODO Using jQuery, set the font-size of all li elements to 20px.
-    $('li').css('font-size', '20px');
+    // $('li').css('font-size', '20px');
     // TODO Craft selectors that highlight all the h1, p, and li elements.
     // $('h1').css('background-color', 'red');
     // $('p').css('background-color', 'blue');
     // $('li').css('background-color', 'green');
     // TODO Create a jQuery statement to alert the contents of your h1 element(s).
-    alert($('h1').text());
+    // alert($('h1').text());
 
     // Multiple Selectors
     //
     // TODO Combine your selectors that highlight all the h1, p, and li elements.
     // $('h1, p, li').css('background-color', 'pink');
+
+
+    //    Mouse Event
+
+        // TODO Remove your custom jQuery code from previous exercises.
+        // TODO Add jQuery code that will change the background color of an h1 element when clicked.
+        $('h1').click(function () {
+            if ($(this).hasClass('backgroundcolor')) {
+                $(this).removeClass('backgroundcolor');
+            } else {
+                $(this).addClass('backgroundcolor')
+            }
+        })
+        // TODO Make all paragraphs have a font size of 18px when they are double clicked.
+        $('p').dblclick(function () {
+            if ($(this).hasClass('fontsize')) {
+                $(this).removeClass('fontsize');
+            } else {
+                $(this).addClass('fontsize')
+            }
+            // $('p').addClass('fontsize');
+        })
+        // TODO Set all li text color to red when the mouse is hovering; reset to black when it is not.
+
+            let mousein = function () {
+                $(this).addClass('redtext');
+            }
+
+            let mouseout = function () {
+                $(this).removeClass('redtext');
+            }
+
+            $('li').hover(mousein, mouseout);
+
+
+
+        // $('li').hover(
+        //     function () {
+        //         $(this).addClass('redtext');
+        //     },
+        // function () {
+        //     $(this).removeClass('redtext');
+        // }
+        // );
+
+    });
 </script>
 
 </body>
