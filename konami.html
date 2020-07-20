@@ -48,17 +48,21 @@
             $(document).keydown(
                 function (e) {
                     if (e.keyCode === konami[index++]) {
-                        $('#'+index).addClass('on');
                         if (index === konami.length) {
                             // user has entered the full konami code
-                            alert("awesome!");
+                            alert("You have added 30 lives!");
                             index = 0;
                         }
                     } else {
-                        index = 0;
-                        $('#body').html('<img src="/img/theKing.mp4" alt="wronginput" type="movie/mp4" class="wronginput">');
+                        failedCode()
+                        index=0
                     }
                 });
+
+            function failedCode() {
+                $('#body').html('<video src="img/theKing.mp4" autoplay alt="wrongpassword"></video>');
+            };
+
 
 
 
