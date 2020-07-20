@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Konami Code</title>
+    <style>
+        .images {
+            height: 50px;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Konami Code</h1>
+
+    <div id="body"></div>
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+
+    <script>
+        "use strict";
+        $(document).ready(function() {
+
+
+            $(document).keyup(function(e) {
+                console.log(e.code);
+                if (e.code === "ArrowRight") {
+                    $('#body').html('<img src="https://image.flaticon.com/icons/svg/68/68779.svg" alt="right-arrow" class="images">');
+                } else if (e.code === "ArrowLeft"){
+                    $('#body').html('<img src="https://toppng.com/uploads/preview/arrow-pointing-to-the-left-115501167743epfu1fapc.png" alt="left-arrow" class="images">');
+                } else if (e.code === "ArrowUp") {
+                    $('#body').html('<img src="https://toppng.com/uploads/preview/arrow-up-black-up-arrow-115632617737cvxxumden.png" alt="up-arrow" class="images">');
+                } else if (e.code === "ArrowDown") {
+                    $('#body').html('<img src="https://toppng.com/uploads/preview/long-arrow-down-down-arrow-clip-art-11563074465fjtjjdbqdo.png" alt="down-arrow" class="images">');
+                } else if (e.code === "KeyB") {
+                    $('#body').html('<img src="https://i.pinimg.com/originals/ed/cb/15/edcb15856721fe481926a2f9d67199db.png" alt="Bkey" class="images">');
+                } else if (e.code === "KeyA") {
+                    $('#body').html('<img src="https://i.pinimg.com/originals/9a/b9/ce/9ab9ce65e54c6d24147b6d7dc3299ac8.png" alt="Akey" class="images">');
+                }
+            });
+
+
+            var index = 0,
+                //       [up, up, dn, dn, lt, rt, lt, rt,  b,  a]
+                konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+
+            $(document).keydown(
+                function (e) {
+                    if (e.keyCode === konami[index++]) {
+                        $('#'+index).addClass('on');
+                        if (index === konami.length) {
+                            // user has entered the full konami code
+                            alert("awesome!");
+                            index = 0;
+                        }
+                    } else {
+                        index = 0;
+                        $('#body').html('<img src="/img/theKing.mp4" alt="wronginput" type="movie/mp4" class="wronginput">');
+                    }
+                });
+
+
+
+        });
+
+    </script>
+</body>
+</html>
