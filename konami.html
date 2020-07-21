@@ -41,21 +41,20 @@
             });
 
 
-            var index = 0,
-                //       [up, up, dn, dn, lt, rt, lt, rt,  b,  a]
-                konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+            let i = 0,
+                //       [up, up, dn, dn, lt, rt, lt, rt,  b,  a, enter]
+                konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
 
             $(document).keydown(
                 function (e) {
-                    if (e.keyCode === konami[index++]) {
-                        if (index === konami.length) {
-                            // user has entered the full konami code
+                    if (e.keyCode === konami[i++]) {
+                        if (i === konami.length) {
                             alert("You have added 30 lives!");
-                            index = 0;
+                            i = 0;
                         }
                     } else {
                         failedCode()
-                        index=0
+                        i = 0;
                     }
                 });
 
