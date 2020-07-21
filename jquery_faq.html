@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>jQuery Attributes and CSS</title>
+    <style>
+        body {
+            background-color: #286A6A;
+            color: white;
+            height: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 40%;
+        }
+
+        dd {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            width: fit-content;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: white;
+        }
+
+        #header-text {
+            text-align: center;
+        }
+
+        .hideBody {
+            visibility: hidden;
+        }
+
+        .invisible {
+            visibility: hidden;
+        }
+
+        .highlight {
+            background-color: yellow;
+            color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="header-image">
+            <img src="img/city-park.jpeg" alt="" >
+    </div>
+
+    <div id="mainBody" class="hideBody">
+        <h1 id="header-text">10 FAQs About National Parks</h1>
+
+        <dl>
+            <a href="#" id="firstQuestion"><dt>1. What government agency oversees the National Park Service?</dt></a>
+            <dd id="firstAnswer" class="invisible">The National Park Service is a bureau of the Department of the Interior. Directly overseeing its operation is the department's Assistant Secretary for Fish, Wildlife and Parks.</dd>
+    <!--        <br>-->
+            <a href="#" id="secondQuestion"><dt>2. What is the largest national park site?</dt></a>
+            <dd id="secondAnswer" class="invisible">Largest: Wrangell-St. Elias National Park and Preserve, AK, at 13.2 million acres</dd>
+    <!--        <br>-->
+            <a href="#" id="thirdQuestion"><dt>3. What is the smallest national park site?</dt></a>
+            <dd id="thirdAnswer" class="invisible">Smallest: Thaddeus Kosciuszko National Memorial, PA, at 0.02 acres</dd>
+    <!--        <br>-->
+            <a href="#" id="fourthQuestion"><dt>4. What is the most-visited national park?</dt></a>
+            <dd id="fourthAnswer" class="invisible">Golden Gate National Recreation Area</dd>
+    <!--        <br>-->
+            <a href="#" id="fifthQuestion"><dt>5. How many people visit the national parks?</dt></a>
+            <dd id="fifthAnswer" class="invisible">Total recreation visitors to the national parks in 2019: 327,516,619.</dd>
+    <!--        <br>-->
+            <a href="#" id="sixthQuestion"><dt>6. Can I bring my pet to a national park?</dt></a>
+            <dd id="sixthAnswer" class="invisible">Some national parks welcome pets—in developed areas, on many trails and campgrounds, and in some lodging facilities. <a href="https://www.nps.gov/planyourvisit/service-animals.htm">Learn more</a> about service animals in national parks, including the difference between service animals and emotional support animals.</dd>
+    <!--        <br>-->
+            <a href="#" id="seventhQuestion"><dt>7. What do I need to know about driving off road in national parks?</dt></a>
+            <dd id="seventhAnswer" class="invisible">Before you head out, check with the national parks that you intend to visit. In many national parks, off-road driving is illegal. Where off-road driving is allowed, the National Park Service regulates it.</dd>
+    <!--        <br>-->
+            <a href="#" id="eighthQuestion"><dt>8. How do I obtain a park entrance pass?</dt></a>
+            <dd id="eighthAnswer" class="invisible">Fewer than one-third of the national parks charge entrance fees. You can obtain park entrance passes by visiting a park site that charges an entrance fee. Entrance fee sites have passes available; we recommend calling a park prior to your visit. (See the park search to locate a specific park.) There are a number of entrance passes available, including park-specific passes as well as passes that offer entrance to more than 2,000 federal recreation sites in addition to the national parks (Annual, Military, Senior, 4th Grade, Access, and Volunteer passes).</dd>
+    <!--        <br>-->
+            <a href="#" id="ninthQuestion"><dt>9. Where can I find a park map?</dt></a>
+            <dd id="ninthAnswer" class="invisible">You can view maps on specific park websites or find national park, National Park System, National Trails System, and other maps.</dd>
+    <!--        <br>-->
+            <a href="#" id="tenthQuestion"><dt>10. How do I reserve a tour in a park?</dt></a>
+            <dd id="tenthAnswer" class="invisible">You can book some park tours through <a href="https://www.recreation.gov/">Recreation.gov</a> such as Pearl Harbor National Memorial, many Mammoth Cave National Park cave tours, Independence National Historical Park tours, and more. Not all parks participate in this reservation service.</dd>
+        </dl>
+    </div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            let body = function () {
+
+                $("#mainBody").removeClass("hideBody")
+
+                $('#firstQuestion').click(function (event) {
+                    event.preventDefault();
+                    if ($("#firstAnswer").hasClass('invisible')) {
+                        $("#firstAnswer").removeClass('invisible');
+                    } else {
+                        $("#firstAnswer").addClass('invisible');
+                    }
+                });
+
+
+            $('#secondQuestion').click(function (event) {
+                event.preventDefault();
+                if ($("#secondAnswer").hasClass('invisible')) {
+                    $("#secondAnswer").removeClass('invisible');
+                } else {
+                    $("#secondAnswer").addClass('invisible');
+                }
+            });
+
+            $('#thirdQuestion').click(function (event) {
+                event.preventDefault();
+                if ($("#thirdAnswer").hasClass('invisible')) {
+                    $("#thirdAnswer").removeClass('invisible');
+                } else {
+                    $("#thirdAnswer").addClass('invisible');
+                }
+            });
+
+            $('#fourthQuestion').click(function (event) {
+                event.preventDefault();
+                if ($("#fourthAnswer").hasClass('invisible')) {
+                    $("#fourthAnswer").removeClass('invisible');
+                } else {
+                    $("#fourthAnswer").addClass('invisible');
+                }
+            });
+
+            $('#fifthQuestion').click(function (event) {
+                event.preventDefault();
+                if ($("#fifthAnswer").hasClass('invisible')) {
+                    $("#fifthAnswer").removeClass('invisible');
+                } else {
+                    $("#fifthAnswer").addClass('invisible');
+                }
+            });
+
+            $('#sixthQuestion').click(function (event) {
+                event.preventDefault();
+                if ($("#sixthAnswer").hasClass('invisible')) {
+                    $("#sixthAnswer").removeClass('invisible');
+                } else {
+                    $("#sixthAnswer").addClass('invisible');
+                }
+            });
+
+            $('#seventhQuestion').click(function (event) {
+                event.preventDefault();
+                if ($("#seventhAnswer").hasClass('invisible')) {
+                    $("#seventhAnswer").removeClass('invisible');
+                } else {
+                    $("#seventhAnswer").addClass('invisible');
+                }
+            });
+
+            $('#eighthQuestion').click(function (event) {
+                event.preventDefault();
+                if ($("#eighthAnswer").hasClass('invisible')) {
+                    $("#eighthAnswer").removeClass('invisible');
+                } else {
+                    $("#eighthAnswer").addClass('invisible');
+                }
+            });
+
+            $('#ninthQuestion').click(function (event) {
+                event.preventDefault();
+                if ($("#ninthAnswer").hasClass('invisible')) {
+                    $("#ninthAnswer").removeClass('invisible');
+                } else {
+                    $("#ninthAnswer").addClass('invisible');
+                }
+            });
+
+            $('#tenthQuestion').click(function (event) {
+                event.preventDefault();
+                if ($("#tenthAnswer").hasClass('invisible')) {
+                    $("#tenthAnswer").removeClass('invisible');
+                } else {
+                    $("#tenthAnswer").addClass('invisible');
+                }
+            })
+            }
+
+            $('dd').click(function(){
+                if ($(this).hasClass('highlight')) {
+                    $(this).removeClass('highlight');
+                } else {
+                    $(this).addClass('highlight')
+                }
+            })
+
+            $("#header-image").fadeOut(3000, body);
+    });
+</script>
+</body>
+</html>
