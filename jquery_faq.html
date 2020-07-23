@@ -40,6 +40,36 @@
             text-align: center;
         }
 
+        /* Callout header */
+        .callout-header {
+            padding: 25px 15px;
+            background: #555;
+            font-size: 30px;
+            color: white;
+        }
+
+        .callout {
+            position: fixed;
+            bottom: 35px;
+            right: 20px;
+            margin-left: 20px;
+            max-width: 300px;
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        /* Change color on mouse-over */
+        .closebtn:hover {
+            color: lightgrey;
+        }
+
         .hideBody {
             visibility: hidden;
         }
@@ -72,6 +102,13 @@
     </div>
 
     <div id="mainBody" class="hideBody">
+    <!--popup box -->
+        <div class="callout">
+            <h1 class="callout-Header">Would you like to sign up for our newsletter?</h1>
+            <!--Uses the HTML entity "&times;" to create the letter "x".-->
+            <span class="closebtn">&times;</span>
+        </div>
+
         <h1 id="header-text">10 FAQs About National Parks</h1>
 
         <dl>

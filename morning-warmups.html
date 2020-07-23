@@ -340,6 +340,32 @@ console.log(addition(7,2))
         console.log(lengthFunction(26));
         console.log(lengthFunction("12"));
 
+    //    capitalize the first letter of eveery word in a string
+    //     let capitalizeFirstLetter = function (str) {
+    //         let arr = str.split(' ')
+    //         console.log(arr)
+    //         arr.forEach(function(word, index) {
+    //             console.log(word[index].charAt(0).toUpperCase() + word.substring(1));
+    //             console.log(arr)
+    //             arr = arr.join(',')
+    //             console.log(arr)
+    //         })
+    //                 return arr;
+    //     };
+    //
+    //     console.log(capitalizeFirstLetter("How can mirrors be real if our eyes aren't real"));
+
+    // Write a function that takes in a string and returns the number of words in the string. Non-string inputs should return null.
+        let stringCount = function(str){
+            if(typeof str === "string"){
+                let arr = str.split(' ')
+                return arr.length
+            } return null
+        }
+
+        console.log(stringCount("My name is Vanessa"));
+        console.log(stringCount("banana"));
+        console.log(stringCount(1));
     </script>
 </body>
 </html>
