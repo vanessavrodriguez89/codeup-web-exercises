@@ -366,6 +366,25 @@ console.log(addition(7,2))
         console.log(stringCount("My name is Vanessa"));
         console.log(stringCount("banana"));
         console.log(stringCount(1));
+
+    //    Write a function that returns “fizz”, “buzz”, or “fizzbuzz” based on the conditions of the famous FizzBuzz exercise. Any number that doesn’t match these conditions should return the number passed. Any non-number passed should have the function return null.
+        function fizzbuzzTwo(input) {
+            if (input % 3 === 0 && input % 5 === 0) {
+                return "Fizzbuzz";
+            } else if (input % 3 === 0) {
+                return "Fizz";
+            } else if (input % 5 === 0) {
+                return "Buzz";
+            } else if (typeof input === "number") {
+                return null
+            } else
+                return input;
+        }
+
+        console.log(fizzbuzzTwo(2));
+        console.log(fizzbuzzTwo('2'));
+        console.log(fizzbuzzTwo(15));
+
     </script>
 </body>
 </html>
