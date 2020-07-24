@@ -45,5 +45,12 @@
         "outdoor"
     ],
     "price": 60
+}, {
+    "title": "Crowbar",
+    "quantity": 10,
+    "categories": [
+        "tool"
+    ],
+    "price": 5
 }
 ]
