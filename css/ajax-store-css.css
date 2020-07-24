@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(53, 53, 53);
+    color: rgb(240, 214, 187);
+    width: fit-content;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+tr:hover {
+    background-color: #EAE5DF;
+    color: #1a1d21;
+}
+
+td:hover {
+    color: #1a1d21;
+}
+
+a:hover {
+    color: #EAE5DF;
+}
+
+#table-body {
+    background-color: rgb(53, 53, 53);
+}
+
+.fontColor {
+    font-family: 'Playfair Display', serif;
+    color: rgb(240, 214, 187);
+}
+
+.HyperionLogo {
+    height: 150px;
+    width: auto;
+}
+
+.nav-link {
+    color: rgb(240, 214, 187);;
+}
+
+.tdHover {
+    color: #1a1d21
+}
+
+
