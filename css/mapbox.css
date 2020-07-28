@@ -1,4 +1,9 @@
 body {
-    background-image: url('img/white-clouds.jpg');
+    background-image: src('./img/white-clouds.jpg');
     background-repeat: no-repeat;
+}
+
+#map {
+    width: 80%;
+    height: 400px;
 }
