@@ -64,14 +64,19 @@ $(document).ready(function () {
         return getHTML()
     });
     marker.on('dragend', function(results1){
-        console.log(results1)
         let lngLat = results1.target._lngLat;
         locationLong = lngLat.lng;
         locationLat = lngLat.lat;
         marker.setLngLat([locationLong, locationLat])
         marker.addTo(map);
-        let place = ('/geocoding/v5/mapbox.places/' + locationLong.toFixed(3) + ',' + locationLat.toFixed(3) +'.json?' +
-            'access_token=' + Weather_MapBox_Key)
+        $.get('https://api.mapbox.com/geocoding/v5/{endpoint}/{longitude},{latitude}.json?access_token={accessToken}',{
+            endpoint: mapbox.places,
+            longitude: locationLong,
+            latitude: locationLat,
+            accessToken: weatherMapKey
+        }).done(function (entry){
+            console.log(entry)
+        })
         // console.log($ curl (place))
         // marker.mapboxClient.geocodeReverse({
         //         latitude: '' + locationLat,
