@@ -34,7 +34,7 @@ $(document).ready(function () {
             let results = data.daily.slice(0,5)
             results.forEach(function(data) {
                 $('#weather-data').css({ display: 'none'}).slideDown(1000).append(
-                    "<div class='card col-2 text-white bg-dark'>"
+                    "<div class='card shadow col-2 my-2 text-white'>"
                     + "<img src='https://openweathermap.org/img/w/" + (data.weather[0].icon) + ".png'" + "class='card-img-top' alt='...'>"
                     + "<div class='card-body'>"
                     + "<p class='card-header px-0'>" + ((new Date(data.dt * 1000)).toDateString()) + "</p>"
@@ -71,4 +71,5 @@ $(document).ready(function () {
         marker.addTo(map);
         return getHTML()
     });
+
 });

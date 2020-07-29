@@ -1,16 +1,28 @@
 body {
+    background-image: url(../img/weather-project/beautiful-clouds.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     background-color: #1F1F1F;
     color: whitesmoke;
     text-align: center;
 }
 
 #forecast {
-    background-color: #0b4c8c;
+    background-color: #3E6159;
     width: 100%;
 }
 
 #map {
     width: 100%;
     height: 400px;
+}
+
+.card {
+    background-color: #3E4661;
+    opacity: 0.8;
+}
+
+.card:hover{
+    opacity: 1.0;
 }
 
