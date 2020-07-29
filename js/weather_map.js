@@ -53,7 +53,7 @@ $(document).ready(function () {
     let marker = new mapboxgl.Marker({
         draggable: true
     })
-    //First retrieves long and lat coordinates from geocoder results
+    //Grabs coordinates from geocoder upon result
     geocoder.on('result', function(results) {
         $('#map').css({ display: 'none'}).fadeIn(3000);
         $('#forecast').css({ display: 'none'}).fadeIn(5000);
