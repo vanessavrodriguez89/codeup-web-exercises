@@ -3,13 +3,17 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #1F1F1F;
-    opacity: 0.8;
     color: whitesmoke;
     text-align: center;
+    font-family: 'Cormorant', serif;
+}
+
+h1 {
+    font-size: 60px;
 }
 
 #forecast {
-    background-color: #3E6159;
+    background-color: rgba(62,97,89,0.5);
     width: 100%;
 }
 

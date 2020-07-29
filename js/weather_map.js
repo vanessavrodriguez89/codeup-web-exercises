@@ -56,7 +56,7 @@ $(document).ready(function () {
     //First retrieves long and lat coordinates from geocoder results
     geocoder.on('result', function(results) {
         $('#map').css({ display: 'none'}).fadeIn(3000);
-        $('#forecast').css({ display: 'none'}).fadeIn(3000);
+        $('#forecast').css({ display: 'none'}).fadeIn(5000);
         locationLong = results.result.center[0];
         locationLat = results.result.center[1];
         marker.setLngLat([locationLong, locationLat])
@@ -77,13 +77,6 @@ $(document).ready(function () {
         }).done(function (entry){
             console.log(entry)
         })
-        // console.log($ curl (place))
-        // marker.mapboxClient.geocodeReverse({
-        //         latitude: '' + locationLat,
-        //         longitude: '' + locationLong
-        //     }, function(err, res) {
-        //         console.log(err, res)
-        //     });
         return getHTML()
     });
 });
