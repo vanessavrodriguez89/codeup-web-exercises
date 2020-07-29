@@ -1,7 +1,7 @@
 mapboxgl.accessToken = Weather_MapBox_Key;
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v9',
+    style: 'mapbox://styles/mapbox/dark-v10',
     center: [-79.4512, 43.6568],
     zoom: 9
 });
@@ -23,8 +23,8 @@ $(document).ready(function () {
     const getHTML = function(){
         $.get("http://api.openweathermap.org/data/2.5/onecall", {
             APPID: weatherMapKey,
-            lat: '' + locationLat,
-            lon: '' + locationLong,
+            lat: locationLat.toString(),
+            lon: locationLong.toString(),
             units: "imperial",
             part: "daily"
         }).done(function(data) {
@@ -64,12 +64,21 @@ $(document).ready(function () {
         return getHTML()
     });
     marker.on('dragend', function(results1){
+        console.log(results1)
         let lngLat = results1.target._lngLat;
         locationLong = lngLat.lng;
         locationLat = lngLat.lat;
         marker.setLngLat([locationLong, locationLat])
         marker.addTo(map);
+        let place = ('/geocoding/v5/mapbox.places/' + locationLong.toFixed(3) + ',' + locationLat.toFixed(3) +'.json?' +
+            'access_token=' + Weather_MapBox_Key)
+        // console.log($ curl (place))
+        // marker.mapboxClient.geocodeReverse({
+        //         latitude: '' + locationLat,
+        //         longitude: '' + locationLong
+        //     }, function(err, res) {
+        //         console.log(err, res)
+        //     });
         return getHTML()
     });
-
 });
