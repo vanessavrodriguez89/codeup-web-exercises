@@ -1,9 +1,16 @@
 body {
-    background-image: src('./img/white-clouds.jpg');
-    background-repeat: no-repeat;
+    background-color: #1F1F1F;
+    color: whitesmoke;
+    text-align: center;
+}
+
+#forecast {
+    background-color: #0b4c8c;
+    width: 100%;
 }
 
 #map {
-    width: 80%;
+    width: 100%;
     height: 400px;
 }
+
