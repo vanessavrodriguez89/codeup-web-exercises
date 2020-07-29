@@ -65,18 +65,8 @@ $(document).ready(function () {
     });
     marker.on('dragend', function(){
         let lngLat = marker.getLngLat();
-        locationLong = lngLat.Vl[0];
-        locationLat = lngLat.Vl[1];
-
-
-        // $.get('https://api.mapbox.com/geocoding/v5/{endpoint}/{longitude},{latitude}.json?access_token={accessToken}',{
-        //     endpoint: mapbox.places,
-        //     longitude: locationLong,
-        //     latitude: locationLat,
-        //     accessToken: weatherMapKey
-        // }).done(function (entry){
-        //     console.log(entry)
-        // })
+        locationLong = lngLat.lng;
+        locationLat = lngLat.lat;
         return getHTML()
     });
 });
