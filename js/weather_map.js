@@ -63,20 +63,20 @@ $(document).ready(function () {
         marker.addTo(map);
         return getHTML()
     });
-    marker.on('dragend', function(results1){
-        let lngLat = results1.target._lngLat;
-        locationLong = lngLat.lng;
-        locationLat = lngLat.lat;
-        marker.setLngLat([locationLong, locationLat])
-        marker.addTo(map);
-        $.get('https://api.mapbox.com/geocoding/v5/{endpoint}/{longitude},{latitude}.json?access_token={accessToken}',{
-            endpoint: mapbox.places,
-            longitude: locationLong,
-            latitude: locationLat,
-            accessToken: weatherMapKey
-        }).done(function (entry){
-            console.log(entry)
-        })
+    marker.on('dragend', function(){
+        let lngLat = marker.getLngLat();
+        locationLong = lngLat.Vl[0];
+        locationLat = lngLat.Vl[1];
+
+
+        // $.get('https://api.mapbox.com/geocoding/v5/{endpoint}/{longitude},{latitude}.json?access_token={accessToken}',{
+        //     endpoint: mapbox.places,
+        //     longitude: locationLong,
+        //     latitude: locationLat,
+        //     accessToken: weatherMapKey
+        // }).done(function (entry){
+        //     console.log(entry)
+        // })
         return getHTML()
     });
 });
